@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,46 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				earth: {
+					'50': '#f6f7f4',
+					'100': '#e0e4d9',
+					'200': '#c5cfb9',
+					'300': '#a2b292',
+					'400': '#809471',
+					'500': '#5c7153',
+					'600': '#455a41',
+					'700': '#364633',
+					'800': '#2b3829',
+					'900': '#252f22',
+					'950': '#121a11',
+				},
+				soil: {
+					'50': '#faf5f0',
+					'100': '#f0e6d8',
+					'200': '#e1ccb3',
+					'300': '#d0ad87',
+					'400': '#c18e62',
+					'500': '#b6774b',
+					'600': '#a66341',
+					'700': '#874f38',
+					'800': '#6f4232',
+					'900': '#5c382c',
+					'950': '#321c16',
+				},
+				sky: {
+					'50': '#f0f8fe',
+					'100': '#ddeffc',
+					'200': '#c2e5fb',
+					'300': '#96d5f8',
+					'400': '#62bbf3',
+					'500': '#399eea',
+					'600': '#277fde',
+					'700': '#2069cb',
+					'800': '#2158a5',
+					'900': '#204a83',
+					'950': '#172e50',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +124,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'fade-up': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'slide-in-right': {
+					'0%': { transform: 'translateX(100%)' },
+					'100%': { transform: 'translateX(0)' }
+				},
+				'slide-in-left': {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(0)' }
+				},
+				'pulse-gentle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-up': 'fade-up 0.5s ease-out',
+				'slide-in-right': 'slide-in-right 0.4s ease-out',
+				'slide-in-left': 'slide-in-left 0.4s ease-out',
+				'pulse-gentle': 'pulse-gentle 2s infinite ease-in-out'
 			}
 		}
 	},
