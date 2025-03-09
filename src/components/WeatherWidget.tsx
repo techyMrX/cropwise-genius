@@ -12,11 +12,11 @@ const weatherData = {
   windSpeed: 12,
   windDirection: 'NE',
   dailyForecast: [
-    { day: 'Mon', temp: 24, condition: 'sun' },
-    { day: 'Tue', temp: 26, condition: 'sun' },
-    { day: 'Wed', temp: 23, condition: 'cloud' },
-    { day: 'Thu', temp: 22, condition: 'rain' },
-    { day: 'Fri', temp: 20, condition: 'rain' },
+    { day: 'Mon', temp: 24, condition: 'sun' as WeatherCondition },
+    { day: 'Tue', temp: 26, condition: 'sun' as WeatherCondition },
+    { day: 'Wed', temp: 23, condition: 'cloud' as WeatherCondition },
+    { day: 'Thu', temp: 22, condition: 'rain' as WeatherCondition },
+    { day: 'Fri', temp: 20, condition: 'rain' as WeatherCondition },
   ]
 };
 

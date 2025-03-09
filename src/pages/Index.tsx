@@ -1,13 +1,9 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, BarChart2, Cloud, Leaf, Droplets, Database, LineChart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
-
-// Importing framer-motion
-<lov-add-dependency>framer-motion@latest</lov-add-dependency>
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({
