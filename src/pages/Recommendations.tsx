@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -19,10 +18,9 @@ import {
   PolarRadiusAxis,
   Radar
 } from 'recharts';
-import { Leaf, BarChart2, Plant, AlertCircle, Download, RefreshCw } from 'lucide-react';
+import { Leaf, BarChart2, Sprout, AlertCircle, Download, RefreshCw } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 
-// Mock data for crop recommendations
 const cropRecommendations = [
   {
     id: 1,
@@ -71,7 +69,6 @@ const cropRecommendations = [
   }
 ];
 
-// Component for individual crop card
 const CropCard = ({ crop }: { crop: any }) => {
   return (
     <Card className="overflow-hidden transition-all hover:shadow-md">
@@ -118,12 +115,10 @@ const Recommendations = () => {
   const navigate = useNavigate();
   
   useEffect(() => {
-    // Retrieve input data from session storage
     const storedData = sessionStorage.getItem('cropInputData');
     if (storedData) {
       setInputData(JSON.parse(storedData));
     } else {
-      // If no data is found, redirect to input page
       navigate('/input');
     }
   }, [navigate]);
@@ -185,7 +180,7 @@ const Recommendations = () => {
           <Tabs defaultValue="recommendations" className="w-full">
             <TabsList className="mb-6 w-full justify-start">
               <TabsTrigger value="recommendations" className="gap-2">
-                <Plant className="h-4 w-4" />
+                <Sprout className="h-4 w-4" />
                 Recommendations
               </TabsTrigger>
               <TabsTrigger value="analytics" className="gap-2">
